@@ -7,6 +7,8 @@ http://das.nasophon.de/pyliblo/<br>
 2. Navigate to Pyliblo directory<br>
 3. type command "./setup.py build"<br>
   -troubleshooting: https://github.com/tidalcycles/Dirt/issues/18<br>
+  -install brew if not installed yet ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+<br>
 4. type command ".setup.py install"<br>
 
 Liblo: <br>
