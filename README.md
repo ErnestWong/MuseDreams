@@ -13,7 +13,7 @@ Liblo: <br>
 http://liblo.sourceforge.net/<br>
 download liblo 0.28<br>
 1. Navigate to Liblo directory in the terminal<br>
-2. type command "configure"<br>
+2. type command "./configure"<br>
 3. type command "make install"<br>
 
 
