@@ -14,6 +14,14 @@ Don't worry about dozing off at home, muse dreams will take care of your home.
 * Rails server
 * Android application
 
+# How to Run
+```bash 
+  git clone https://github.com/ErnestWong/MuseDreams.git
+```
+* install [Muse IO](http://www.choosemuse.com/developer-kit)
+* run `` ./muse.bash ``
+* run `` python main.py ``
+
 #Installing MuseIO Troubleshooting
 Downloading MuseIO
 Pyliblo: <br>
