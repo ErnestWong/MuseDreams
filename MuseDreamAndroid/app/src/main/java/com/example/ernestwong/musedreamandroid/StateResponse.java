@@ -1,7 +1,5 @@
 package com.example.ernestwong.musedreamandroid;
 
-import android.content.Context;
-import android.media.AudioManager;
 import android.util.Log;
 
 import org.json.JSONObject;
