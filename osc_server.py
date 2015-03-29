@@ -5,6 +5,7 @@ from FSM import *
 import sys
 import time
 import serial
+import volume_control
 
 class MuseServer(ServerThread):
 
@@ -25,14 +26,23 @@ class MuseServer(ServerThread):
 
     @make_method('/muse/elements/blink', 'i') 
     def blink_callback(self, path, args):
+        if not self.touching_forehead:
+            return
         if not self.prev == self.fsm.state_machine():
             self.write_to_port(self.fsm.state_machine())
+            self.manage_volume(self.prev, self.fsm.state_machine())
             print "state: {}".format(self.fsm.state_machine())
         self.prev = self.fsm.state_machine()
         self.fsm.update_blink(args[0])
-        if args[0] and self.touching_forehead:
+        if args[0]:
             self.blink_count += 1
             print "blinked:{} times".format(self.blink_count) 
+
+    def manage_volume(self, prev, cur_state):
+        if cur_state == 4:
+            volume_control.mute_volume()
+        if cur_state == 0 and prev == 4:
+            volume_control.restore_volume(2)
 
     def write_to_port(self, state):
         self.serialPort.write(str(state).encode())
