@@ -1,6 +1,21 @@
 # MuseDreams
 WesternHacks project using Muse headband
 
+Don't worry about dozing off at home, muse dreams will take care of your home.
+* Detects when user is about to fall asleep and makes adjustments to external environment
+* Sends signal to Arduino to dim a light source
+* Computer volume is gradually lowered
+* Sends data to remote server which is intepreted and used by Android application (i.e. decrease volume, pause music, turn notifications off)
+* When user wakes up, settings are gradually reverted
+
+# Technologies
+* [Muse SDK](http://www.choosemuse.com/developer-kit) 
+* Arduino microcontroller
+* Rails server
+* Android application
+
+#Installing MuseIO Troubleshooting
+Downloading MuseIO
 Pyliblo: <br>
 http://das.nasophon.de/pyliblo/<br>
 1. Download Liblo first<br>
