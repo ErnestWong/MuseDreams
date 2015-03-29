@@ -1,14 +1,13 @@
 class StatesController < ApplicationController
 
+  respond_to :json
+
   def index
   end
 
   def show
-    @state = State.find(states_params)
-    respond_to do |format|
-      format.html
-      format.json{ render json: @state.to_json }
-  end
+    @state = State.find(params[:id])
+    respond_with(@state)
   end
 
   def create
