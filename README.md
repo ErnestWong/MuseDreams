@@ -1,5 +1,5 @@
 # MuseDreams
-WesternHacks project using Muse headband
+[WesternHacks project using Muse headband](http://hackwestern.challengepost.com/submissions/34909-musedreams?utm_campaign=hack-western-2015_20141210&utm_content=submission_visible_in_gallery&utm_medium=email&utm_source=transactional)
 
 Don't worry about dozing off at home, muse dreams will take care of your home.
 * Detects when user is about to fall asleep and makes adjustments to external environment
