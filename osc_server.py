@@ -28,6 +28,7 @@ class MuseServer(ServerThread):
     @make_method('/muse/elements/blink', 'i') 
     def blink_callback(self, path, args):
         if not self.touching_forehead:
+            print "not touching forehead"
             return
 
         cur_state = self.fsm.state_machine()

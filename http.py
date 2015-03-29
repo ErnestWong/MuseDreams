@@ -1,6 +1,7 @@
 import urllib
 
-url = 'http://localhost:3000/states'
+url = 'https://shielded-sierra-1551.herokuapp.com/states.json'
+local_url = 'http://localhost:3000/states.json'
 
 def post_request(state):
     params = urllib.urlencode({
