@@ -17,6 +17,8 @@ class FSM():
             self.state = 0
             return self.state
         else:
+            if self.state == 4:
+                return self.state
             if self.timing:
                 return self.state
             else:
