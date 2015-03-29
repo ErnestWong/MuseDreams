@@ -7,10 +7,14 @@ class FSM():
         print "starting"
         self.blinked = False
         self.timing = False
+        self.error = False
         self.state = 0
 
     def update_blink(self, blink):
         self.blinked = blink
+
+    def update_error(self, forehead):
+        self.error = forehead
 
     def state_machine(self):
         if self.blinked:
@@ -28,7 +32,7 @@ class FSM():
 
     def start_timer(self):
         self.timing = True
-        t = Timer(4, self.stop).start()
+        t = Timer(3, self.stop).start()
 
     def stop(self):
         self.timing = False

@@ -7,5 +7,7 @@ def post_request(state):
     params = urllib.urlencode({
         'state': '{}'.format(state)
     })
-    data = urllib.urlopen(url, params).read()
-
+    try:
+        data = urllib.urlopen(url, params).read()
+    except: 
+        print "error"

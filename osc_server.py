@@ -24,6 +24,7 @@ class MuseServer(ServerThread):
     @make_method('/muse/elements/touching_forehead', 'i')
     def touching_forehead_callback(self, path, args):
         self.touching_forehead = args[0]
+        self.fsm.update_error(args[0])
 
     @make_method('/muse/elements/blink', 'i') 
     def blink_callback(self, path, args):
@@ -44,7 +45,7 @@ class MuseServer(ServerThread):
 
         if args[0]:
             self.blink_count += 1
-            print "blinked:{} times".format(self.blink_count) 
+            print "blink count: {}".format(self.blink_count)
 
     def write_to_port(self, state):
         self.serialPort.write(str(state).encode())
