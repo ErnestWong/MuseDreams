@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
    resources :states
 
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

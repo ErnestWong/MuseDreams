@@ -3,10 +3,12 @@ class StatesController < ApplicationController
   respond_to :json
 
   def index
+    @state = State.last 
+    respond_with(@state)
   end
 
   def show
-    @state = State.find(params[:id])
+    @state = State.find(params[:id]) 
     respond_with(@state)
   end
 
