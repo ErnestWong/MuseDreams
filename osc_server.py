@@ -16,9 +16,9 @@ class MuseServer(ServerThread):
         ServerThread.__init__(self, 5001)
         self.fsm = FSM()
         self.blink_count = 0;
-        #self.serialPort = serial.Serial('/dev/tty.usbmodem1411', 9600)
+        self.serialPort = serial.Serial('/dev/tty.usbmodem1421', 9600)
         time.sleep(2)
-        #self.write_to_port(10)
+        self.write_to_port(10)
         self.prev = 0
 
     @make_method('/muse/elements/touching_forehead', 'i')
@@ -34,7 +34,7 @@ class MuseServer(ServerThread):
         cur_state = self.fsm.state_machine()
 
         if not self.prev == cur_state:
-            #self.write_to_port(cur_state)
+            self.write_to_port(cur_state)
             volume_control.manage_volume(self.prev, cur_state)
             http.post_request(cur_state)
             print "state: {}".format(cur_state)
