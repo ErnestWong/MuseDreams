@@ -30,7 +30,7 @@ class MuseServer(ServerThread):
             return
         if not self.prev == self.fsm.state_machine():
             self.write_to_port(self.fsm.state_machine())
-            self.manage_volume(self.prev, self.fsm.state_machine())
+            volume_control.manage_volume(self.prev, self.fsm.state_machine())
             print "state: {}".format(self.fsm.state_machine())
         self.prev = self.fsm.state_machine()
         self.fsm.update_blink(args[0])
@@ -38,25 +38,6 @@ class MuseServer(ServerThread):
             self.blink_count += 1
             print "blinked:{} times".format(self.blink_count) 
 
-    def manage_volume(self, prev, cur_state):
-        if cur_state == 4:
-            volume_control.mute_volume()
-        if cur_state == 0 and prev == 4:
-            volume_control.restore_volume(2)
-
     def write_to_port(self, state):
         self.serialPort.write(str(state).encode())
         self.serialPort.flush()
-
-try:
-    server = MuseServer()
-except ServerError, err:
-    print str(err)
-    sys.exit()
-
-server.start()
-   #start timing
-
-if __name__ == "__main__":
-    while 1:
-        time.sleep(1)

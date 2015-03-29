@@ -8,3 +8,11 @@ def mute_volume():
 
 def restore_volume(volume):
     sa.set_volume(volume)
+
+def manage_volume(prev, cur_state):
+    if cur_state == 4:
+        mute_volume()
+    if cur_state == 0 and prev == 4:
+        restore_volume(2)
+
+
