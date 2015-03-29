@@ -28,7 +28,7 @@ class FSM():
 
     def start_timer(self):
         self.timing = True
-        t = Timer(1, self.stop).start()
+        t = Timer(4, self.stop).start()
 
     def stop(self):
         self.timing = False
