@@ -3,8 +3,8 @@
 
 [WesternHacks project using Muse headband](http://hackwestern.challengepost.com/submissions/34909-musedreams?utm_campaign=hack-western-2015_20141210&utm_content=submission_visible_in_gallery&utm_medium=email&utm_source=transactional)
 
-<img src="https://raw.githubusercontent.com/niralfernando/MuseDreams/master/images/muse_picture.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+<img src="https://raw.githubusercontent.com/ErnestWong/MuseDreams/master/images/muse_picture.jpg" 
+alt="IMAGE ALT TEXT HERE" width="320" height="200" border="10" />
 
 Don't worry about dozing off at home, muse dreams will take care of your home.
 * Detects when user is about to fall asleep and makes adjustments to external environment
