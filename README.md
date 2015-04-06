@@ -41,7 +41,6 @@ http://das.nasophon.de/pyliblo/<br>
   ```
 <br>
 4. type command ".setup.py install"<br>
-
 Liblo: <br>
 http://liblo.sourceforge.net/<br>
 download liblo 0.28<br>
@@ -49,4 +48,8 @@ download liblo 0.28<br>
 2. type command "./configure"<br>
 3. type command "make install"<br>
 
+
+
+<img src="https://raw.githubusercontent.com/ErnestWong/MuseDreams/master/images/testing_brainwaves.jpg" 
+alt="IMAGE ALT TEXT HERE" width="320" height="230" border="10" />
 
